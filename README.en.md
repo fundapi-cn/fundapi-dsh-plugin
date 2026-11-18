@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://fundapi.cn"><img src="https://fundapi.cn/icon-512.png" width="88" height="88" alt="Fund Data API"></a>
+<a href="https://fundapi.cn"><img src="https://fundapi.cn/icon-round.png" width="88" height="88" alt="Fund Data API"></a>
 
 # fundapi — Official DeepSeek Harness Plugin for the Fund Data API
 
