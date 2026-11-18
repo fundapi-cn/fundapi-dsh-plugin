@@ -1,0 +1,62 @@
+{
+  "name": "fundapi-dsh-plugin",
+  "version": "0.1.0",
+  "description": "基金数据 API 官方 DeepSeek Harness 插件 —— 桌面端 / Web UI 输个包名即装，19 个基金工具（净值 / 持仓 / 调仓 / 经理 / 评级 / 排行 / 选基 / 组合穿透 / 分红 / 交易规则），免费工具无需 Key",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "test.js",
+    "cordis.patch.yml",
+    "icon.png",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "icon": "icon.png",
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "plugin",
+    "mcp",
+    "fund",
+    "fund-data",
+    "fund-api",
+    "mutual-fund",
+    "china-fund-market",
+    "financial-data",
+    "finance",
+    "基金",
+    "基金数据",
+    "净值"
+  ],
+  "homepage": "https://fundapi.cn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fundapi-cn/fundapi-dsh-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fundapi-cn/fundapi-dsh-plugin/issues"
+  },
+  "license": "MIT"
+}
