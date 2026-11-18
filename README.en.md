@@ -36,7 +36,7 @@ The plugin does one thing: it connects DSH to the **MCP endpoint** at [fundapi.c
 - **Install by package name** in the desktop app or Web UI — no JSON, no scripts; restart and it works
 - **The free tools need no key**: `fund_search`, `fund_profile` and `fund_screener_options` work right away
 - **Labels are spelled out**: "newly in the top ten" is not "newly bought", and an intraday estimate is not the NAV — the tool descriptions say so
-- **Side-by-side, no verdicts**: `fund_compare` lists returns, fees, managers and top holdings for 2–5 funds without a composite score or a recommendation
+- **Aligned side by side, differences at a glance**: key metrics for 2–5 funds on one comparable basis
 - **No data is not a failure**: an agency that did not rate a fund in a period, or a bond fund with no equity to estimate, comes back with a stated reason instead of an error
 - **Tool descriptions are written for AI agents**: when to use each tool, how to fill the parameters, what comes back
 - **Nothing for you to maintain**: data and computation live on the server
