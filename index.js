@@ -42,7 +42,7 @@ const OWN_FIELDS = ['apiKey', 'url', 'serverName', 'headers']
 /** mcp-client 对 `serverName` 的硬约束。 */
 const SERVER_NAME_RE = /^[A-Za-z0-9_-]{1,32}$/
 
-/** 归一化字段名，用于识别 `api_key` / `api-key` / `APIKEY` 这类拼写变体。 */
+/** 把字段名压成小写、只留字母数字，用于识别 `api_key` / `api-key` / `APIKEY` 这类拼写变体。 */
 function normalizeKey(key) {
   return String(key).toLowerCase().replace(/[^a-z0-9]/g, '')
 }
