@@ -2,7 +2,7 @@
 
 <a href="https://fundapi.cn"><img src="https://fundapi.cn/icon-512.png" width="88" height="88" alt="Fund Data API"></a>
 
-# fundapi — Official DeepSeek Harness Plugin for Fund Data API
+# fundapi — Official DeepSeek Harness Plugin for the Fund Data API
 
 Give **DeepSeek Harness (DSH)** direct access to China fund data: NAV history, holdings, position changes, fund managers, ratings, rankings, screening, portfolio look-through, dividends and trading rules — **19 tools, 3 of them free and key-less**.
 
@@ -15,7 +15,7 @@ Install it from the desktop app, the Web UI or the CLI — [download the desktop
 
 **English** · [中文](README.md)
 
-[Website](https://fundapi.cn) · [Docs](https://fundapi.cn/docs/) · [MCP setup](https://fundapi.cn/mcp/) · [Pricing](https://fundapi.cn/pricing/) · [FAQ](https://fundapi.cn/faq/)
+[Website](https://fundapi.cn) · [Docs](https://fundapi.cn/en/docs/) · [MCP setup](https://fundapi.cn/en/mcp/) · [Pricing](https://fundapi.cn/en/pricing/) · [FAQ](https://fundapi.cn/en/faq/)
 
 [Source](https://github.com/fundapi-cn/fundapi-dsh-plugin) · [Issues](https://github.com/fundapi-cn/fundapi-dsh-plugin/issues) · [Changelog](CHANGELOG.md)
 
@@ -35,10 +35,12 @@ The plugin does one thing: it connects DSH to the **MCP endpoint** at [fundapi.c
 
 - **Install by package name** in the desktop app or Web UI — no JSON, no scripts; restart and it works
 - **The free tools need no key**: `fund_search`, `fund_profile` and `fund_screener_options` work right away
-- **Tool descriptions are written for AI agents**: when to use each tool, how to fill the parameters, what comes back — plus the traps worth knowing, such as "newly in the top ten" not meaning "newly bought"
-- **Estimates are labelled as estimates**: before the daily NAV is published you get an estimate, clearly marked, never presented as the NAV itself
+- **Labels are spelled out**: "newly in the top ten" is not "newly bought", and an intraday estimate is not the NAV — the tool descriptions say so
 - **Side-by-side, no verdicts**: `fund_compare` lists returns, fees, managers and top holdings for 2–5 funds without a composite score or a recommendation
-- **Thin by design**: the plugin holds configuration only — data and computation live on the server
+- **No data is not a failure**: an agency that did not rate a fund in a period, or a bond fund with no equity to estimate, comes back with a stated reason instead of an error
+- **Tool descriptions are written for AI agents**: when to use each tool, how to fill the parameters, what comes back
+- **Nothing for you to maintain**: data and computation live on the server
+- **Thin by design**: the plugin holds configuration only
 
 ---
 
@@ -110,7 +112,7 @@ npx @deepseek-ai/dsh plugin --profile web remove fundapi-dsh-plugin
 
 ## API key
 
-The 3 free tools need nothing. The other 16 (NAV history, holdings, position changes, managers, ratings, rankings, screening, look-through, dividends, trading rules…) need a key: [get one](https://fundapi.cn/pricing/) — trial ¥9.9 / 7 days, Pro ¥59/month, Institutional ¥299/month.
+The 3 free tools need nothing. The other 16 (NAV history, holdings, position changes, managers, ratings, rankings, screening, look-through, dividends, trading rules…) need a key: [get one](https://fundapi.cn/pricing/) — three tiers: Trial, Pro and Institutional (see the pricing page).
 
 **Option 1: environment variable**
 
@@ -154,15 +156,15 @@ Tool names look like `mcp__fundapi__fund_nav`.
 
 `fund_search` · `fund_profile` (fees, period returns, manager, size, asset mix, holder structure, top ten holdings) · `fund_screener_options`
 
-**Trial and above (¥9.9 / 7 days)**
+**Trial and above**
 
 `fund_nav` NAV history · `fund_rank` market-wide rankings · `fund_notices` announcements
 
-**Pro and above (¥59/month)**
+**Pro and above**
 
 `fund_holdings` quarterly holdings · `fund_managers` current managers · `fund_estimate` intraday estimate · `fund_dividends` dividends and splits · `fund_trade_rule` trading rules and fees · `fund_rating` multi-agency ratings
 
-**Institutional (¥299/month)**
+**Institutional**
 
 `fund_overlap` holding overlap · `fund_portfolio_xray` portfolio look-through · `fund_holding_changes` position changes · `fund_manager_history` manager tenure history · `fund_portfolio_diagnose` portfolio diagnosis · `fund_screener` multi-criteria screening · `fund_compare` fund comparison
 
